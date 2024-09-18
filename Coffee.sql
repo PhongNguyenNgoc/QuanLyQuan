@@ -183,3 +183,5 @@ SELECT * FROM dbo.BillInfo WHERE idBill=3
  SELECT f.name,bi.count,f.price,f.price * bi.count AS totalPrice
  FROM dbo.BillInfo AS bi,dbo.Bill AS b,dbo.Food AS f 
  WHERE bi.idBill=b.id AND bi.idFood =f.id AND b.idTable=2
+
+UPDATE dbo.Bill SET idTable=3 WHERE id=3
