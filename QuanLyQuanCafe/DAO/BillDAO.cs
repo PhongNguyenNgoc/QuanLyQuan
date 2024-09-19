@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyQuanCafe.DAO
 {
@@ -29,5 +30,22 @@ namespace QuanLyQuanCafe.DAO
             }
             return -1;
         }
+        public void insertBill(int id)
+        {
+            DataProvider.Instance.ExcuteNonQuery("EXEC USP_InsertBill @@idTable", new Object[] {id});
+        }
+        public int getMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExcuteScalar("SELECT MAX(id) FROM dbo.Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }
+
+

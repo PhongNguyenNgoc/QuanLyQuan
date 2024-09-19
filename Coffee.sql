@@ -155,6 +155,24 @@ VALUES  ( GETDATE() , -- DateCheckIn - date
           0  -- status - int
         ),(GETDATE(),NULL,2,0),(GETDATE(),GETDATE(),2,1)
 
+--=====================Them Bill Stored Procedure=============
+CREATE PROC USP_InsertBill
+@idTable INT 
+AS
+BEGIN
+	INSERT dbo.Bill
+	        ( DateCheckIn ,
+	          DateCheckOut ,
+	          idTable ,
+	          status
+	        )
+	VALUES  ( GETDATE() , -- DateCheckIn - date
+	          null , -- DateCheckOut - date
+	          @idTable , -- idTable - int
+	          0  -- status - int
+	        )
+END	
+GO
 
 --========================Them bill info
 SELECT * FROM dbo.BillInfo
@@ -164,6 +182,38 @@ VALUES  ( 1, -- idBill - int
           1, -- idFood - int
           2  -- count - int
           ),(1,3,4),(1,5,1),(2,6,2),(3,5,2);
+--=================Tao bill info Store Procedure===
+GO
+
+CREATE PROC USP_InsertBillInfo
+@idBill int , @idFood int ,@count int 
+AS
+BEGIN
+	DECLARE @isExitsBillInfo INT
+	DECLARE @foodCount INT = 1
+
+	SELECT @isExitsBillInfo= id,@foodCount= count FROM dbo.BillInfo WHERE @idBill=idBill AND @idFood=idFood
+
+	IF (@isExitsBillInfo > 0)
+		BEGIN
+			DECLARE @newCount INT = @foodCount + @count
+			IF (@newCount > 0)
+				UPDATE dbo.BillInfo SET count = @foodCount + @count WHERE idFood=@idFood
+			ELSE
+				DELETE dbo.BillInfo WHERE idBill=@idBill AND idFood=@idFood
+		END
+	ELSE
+		BEGIN
+			INSERT dbo.BillInfo
+	        ( idBill, idFood, count )
+			VALUES  ( @idBill, -- idBill - int
+	          @idFood, -- idFood - int
+	          @count  -- count - int
+	          )
+		END		
+END
+GO
+
 
 --======================DEBUG ZONE========================
 UPDATE dbo.TableFood SET status = N'Có người' WHERE id=7
@@ -185,3 +235,7 @@ SELECT * FROM dbo.BillInfo WHERE idBill=3
  WHERE bi.idBill=b.id AND bi.idFood =f.id AND b.idTable=2
 
 UPDATE dbo.Bill SET idTable=3 WHERE id=3
+
+SELECT * FROM dbo.Food WHERE idCategory=1
+
+SELECT MAX(id) FROM dbo.Bill

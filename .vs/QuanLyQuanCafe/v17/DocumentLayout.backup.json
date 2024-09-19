@@ -7,8 +7,32 @@
       "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\quanlyquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\dao\\billdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dao\\billdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\dao\\billinfodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dao\\billinfodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\dto\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dto\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquancafe\\quanlyquancafe\\dto\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dto\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +42,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BillInfoDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\BillInfoDAO.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DAO\\BillInfoDAO.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\BillInfoDAO.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DAO\\BillInfoDAO.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T08:00:04.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BillDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\BillDAO.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DAO\\BillDAO.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\BillDAO.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DAO\\BillDAO.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwCgAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T07:52:20.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FoodDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:43:44.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Food.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DTO\\Food.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DTO\\Food.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DTO\\Food.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DTO\\Food.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:35:47.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DTO\\Category.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DTO\\Category.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DTO\\Category.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DTO\\Category.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:24:40.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\CategoryDAO.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DAO\\CategoryDAO.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\DAO\\CategoryDAO.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DAO\\CategoryDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:22:14.669Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,9 +130,9 @@
               "RelativeDocumentMoniker": "QuanLyQuanCafe\\fTableManager.cs",
               "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuanCafe\\QuanLyQuanCafe\\fTableManager.cs*",
               "RelativeToolTip": "QuanLyQuanCafe\\fTableManager.cs*",
-              "ViewState": "AgIAADoAAAAAAAAAAAAUwEIAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAApwJIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:59:55.745Z",
+              "WhenOpened": "2024-09-19T06:16:12.922Z",
               "EditorCaption": ""
             },
             {

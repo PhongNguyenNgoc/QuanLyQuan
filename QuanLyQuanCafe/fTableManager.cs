@@ -22,8 +22,23 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
             LoadTable();
+            LoadCategory();
         }
         #region Method
+
+        void LoadCategory()
+        {
+            List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource= listCategory;
+            cbCategory.DisplayMember = "Name";
+        }
+
+        void LoadFoodListByCategoryID(int id)
+        {
+            List<Food> listFood = FoodDAO.Instance.GetListCategoryID(id);
+            cbFood.DataSource= listFood;
+            cbFood.DisplayMember = "Name";
+        }
         void LoadTable()
         {
            List<Table> tableList= TableDAO.Instance.LoadTableList();
@@ -77,6 +92,7 @@ namespace QuanLyQuanCafe
         private void Btn_Click(object sender, EventArgs e)
         {
             int tableID= ((sender as Button).Tag as Table).ID;
+            lsvBill.Tag=(sender as Button).Tag;
             ShowBill(tableID);
         }
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,6 +111,44 @@ namespace QuanLyQuanCafe
             fAdmin fAdmin = new fAdmin();
             fAdmin.ShowDialog();
         }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+
+            if(cb.SelectedItem == null)
+            {
+                return;
+            }
+            Category selected = cb.SelectedItem as Category;
+            id= selected.ID;
+            LoadFoodListByCategoryID(id);
+        }
+
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+            Table table= lsvBill.Tag as Table;
+            int idBill = BillDAO.Instance.getUncheckBillIDByTableID(table.ID);
+            int FoodID = (cbFood.SelectedItem as Food).ID;
+            int count= (int)nmFoodCount.Value;
+
+            //TH1: Chua co bill nao va  tao bill moi
+            if (idBill == -1)
+            {
+                BillDAO.Instance.insertBill(table.ID);
+                BillInfoDAO.Instance.insertBillInfo(BillDAO.Instance.getMaxIDBill(), FoodID, count);
+            }
+            //TH2: them bill da ton tai
+            else 
+            {
+                BillInfoDAO.Instance.insertBillInfo(idBill, FoodID, count);
+            }
+            ShowBill(table.ID);
+        }
+
         #endregion
+
+
     }
 }
