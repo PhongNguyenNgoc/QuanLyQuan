@@ -156,6 +156,7 @@ VALUES  ( GETDATE() , -- DateCheckIn - date
         ),(GETDATE(),NULL,2,0),(GETDATE(),GETDATE(),2,1)
 
 --=====================Them Bill Stored Procedure=============
+go
 CREATE PROC USP_InsertBill
 @idTable INT 
 AS
@@ -213,7 +214,37 @@ BEGIN
 		END		
 END
 GO
+--===========tao trigger cho viec them sua bang Update Bill Info========
+CREATE TRIGGER UTG_UpdateBillInfo
+ON dbo.BillInfo FOR INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill = idBill FROM Inserted
 
+	DECLARE @idTable INT 
+	SELECT @idTable = idTable FROM dbo.Bill where id = @idBill AND status = 0
+	UPDATE dbo.TableFood SET status = N'Có người'WHERE id=@idTable
+END
+GO
+--=========================================================
+GO
+CREATE TRIGGER UTG_UpdateBill
+ON dbo.Bill FOR UPDATE
+AS
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill=id FROM Inserted
+
+	DECLARE @idTable INT
+	SELECT @idTable= idTable FROM  dbo.Bill WHERE id=@idBill
+
+	DECLARE @count INT
+	SELECT @count=COUNT(*) FROM dbo.Bill WHERE idTable=@idTable AND status = 0
+
+	IF (@count = 0)
+		UPDATE dbo.TableFood SET status=N'Trống' WHERE id=@idTable
+END
 
 --======================DEBUG ZONE========================
 UPDATE dbo.TableFood SET status = N'Có người' WHERE id=7
@@ -239,3 +270,8 @@ UPDATE dbo.Bill SET idTable=3 WHERE id=3
 SELECT * FROM dbo.Food WHERE idCategory=1
 
 SELECT MAX(id) FROM dbo.Bill
+
+UPDATE dbo.Bill SET status=1 WHERE id=1
+
+DELETE dbo.BillInfo
+DELETE dbo.Bill
