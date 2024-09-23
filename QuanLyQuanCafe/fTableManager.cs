@@ -165,7 +165,7 @@ namespace QuanLyQuanCafe
             {
                 if (MessageBox.Show(string.Format("Bàn {0} đã thực hiện thanh toán? \n với giá tiền trả đã giảm {1}% là {2}", table.Name,discount,finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK) 
                 { 
-                    BillDAO.Instance.checkOut(idBill,discount);
+                    BillDAO.Instance.checkOut(idBill,discount,finalTotalPrice);
                     ShowBill(table.ID);
                 }
             }

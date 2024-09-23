@@ -53,7 +53,8 @@ CREATE TABLE Bill
 	DateCheckOut DATE,
 	idTable INT NOT NULL,
 	status INT NOT NULL DEFAULT 0, -- 1: đã thanh toán && 0: chưa thanh toán
-	discount int
+	discount INT,
+    totalPrice FLOAT,
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
 GO
@@ -147,7 +148,8 @@ INSERT INTO dbo.Bill
         ( DateCheckIn ,
           DateCheckOut ,
           idTable ,
-          status
+          status,
+
         )
 VALUES  ( GETDATE() , -- DateCheckIn - date
           NULL , -- DateCheckOut - date
@@ -333,7 +335,17 @@ BEGIN
 
 END
 GO
+--=================tao proc xem tat ca bill============
+CREATE PROC USP_GetListBillByDate
+@checkIn DATE, @checkOut DATE
+AS
+BEGIN
+     SELECT t.name AS [Tên bàn], DateCheckIn AS [Ngày vào], DateCheckOut as [Ngày thanh toán] , discount AS [Giảm giá], b.totalPrice AS [Tổng hóa đơn]
+	FROM dbo.Bill AS b, dbo.TableFood AS t
+	WHERE DateCheckIn >= '20240923' AND DateCheckOut >='20240923'AND b.status = 1 AND t.id=b.idTable
 
+END
+go
 --======================DEBUG ZONE========================
 UPDATE dbo.TableFood SET status = N'Có người' WHERE id=7
 SELECT * FROM Food
@@ -369,7 +381,24 @@ UPDATE dbo.Bill SET discount = 0
 DECLARE @idBillTest int = 41
 SELECT * FROM dbo.BillInfo WHERE idBill=@idBillTest
 
-SELECT * FROM dbo.Bill
+
 
 UPDATE dbo.TableFood SET status =N'Trống'
 
+SELECT * FROM dbo.BillInfo
+
+ALTER TABLE dbo.Bill ADD totalPrice FLOAT
+
+
+SELECT *
+FROM dbo.Bill
+
+EXEC dbo.USP_GetListBillByDate @checkIn = '20240923', -- date
+    @checkOut = '20240923' -- date
+
+ SELECT t.name, DateCheckIn, DateCheckOut , discount, b.totalPrice
+	FROM dbo.Bill AS b, dbo.TableFood AS t
+	WHERE DateCheckIn >= '20240923' AND DateCheckOut >='20240923'AND b.status = 1 AND t.id=b.idTable
+
+
+SELECT * FROM dbo.BillInfo
