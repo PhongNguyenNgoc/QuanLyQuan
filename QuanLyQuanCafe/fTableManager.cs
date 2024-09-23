@@ -83,8 +83,8 @@ namespace QuanLyQuanCafe
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
             }
-            CultureInfo culture= new CultureInfo("vi-VN");
-            txbTotalPrice.Text = totalPrice.ToString("c",culture);
+            //CultureInfo culture= new CultureInfo("vi-VN");
+            txbTotalPrice.Text = totalPrice.ToString();
           
         }
 
@@ -153,11 +153,14 @@ namespace QuanLyQuanCafe
         {
             Table table = lsvBill.Tag as Table;
             int idBill =BillDAO.Instance.getUncheckBillIDByTableID(table.ID);
+            int discount=(int)nmDisCount.Value;
+            float totalPrice = float.Parse(txbTotalPrice.Text);
+            float finalTotalPrice = totalPrice - (totalPrice * discount) / 100;
             if(idBill != -1)
             {
-                if (MessageBox.Show("Bàn " + table.Name + " đã thực hiện thanh toán?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK) 
+                if (MessageBox.Show(string.Format("Bàn {0} đã thực hiện thanh toán? \n với giá tiền trả đã giảm {1}% là {2}", table.Name,discount,finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK) 
                 { 
-                    BillDAO.Instance.checkOut(idBill);
+                    BillDAO.Instance.checkOut(idBill,discount);
                     ShowBill(table.ID);
                 }
             }

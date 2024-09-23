@@ -52,8 +52,8 @@ CREATE TABLE Bill
 	DateCheckIn DATE NOT NULL DEFAULT GETDATE(),
 	DateCheckOut DATE,
 	idTable INT NOT NULL,
-	status INT NOT NULL DEFAULT 0 -- 1: đã thanh toán && 0: chưa thanh toán
-	
+	status INT NOT NULL DEFAULT 0, -- 1: đã thanh toán && 0: chưa thanh toán
+	discount int
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
 GO
@@ -165,12 +165,14 @@ BEGIN
 	        ( DateCheckIn ,
 	          DateCheckOut ,
 	          idTable ,
-	          status
+	          status,
+			  discount
 	        )
 	VALUES  ( GETDATE() , -- DateCheckIn - date
 	          null , -- DateCheckOut - date
 	          @idTable , -- idTable - int
-	          0  -- status - int
+	          0 ,
+			  0 -- status - int
 	        )
 END	
 GO
@@ -275,3 +277,9 @@ UPDATE dbo.Bill SET status=1 WHERE id=1
 
 DELETE dbo.BillInfo
 DELETE dbo.Bill
+
+UPDATE dbo.Bill SET discount = 0
+
+SELECT * FROM dbo.Bill
+
+SELECT * FROM dbo.Bill
