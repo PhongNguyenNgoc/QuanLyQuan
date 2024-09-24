@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\faccountprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\faccountprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\faccountprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\faccountprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|c:\\users\\phong23\\documents\\source\\quanlyquan\\quanlyquancafe\\dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55A144C-CC1D-435B-B9AF-AA860B2A8039}|QuanLyQuanCafe\\QuanLyQuanCafe.csproj|solutionrelative:quanlyquancafe\\dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fAccountProfile.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAccountProfile.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanCafe\\fAccountProfile.cs",
-              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAccountProfile.cs [Design]",
-              "RelativeToolTip": "QuanLyQuanCafe\\fAccountProfile.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T08:42:53.693Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountDAO.cs",
-              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\DAO\\AccountDAO.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DAO\\AccountDAO.cs",
-              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\DAO\\AccountDAO.cs",
-              "RelativeToolTip": "QuanLyQuanCafe\\DAO\\AccountDAO.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwCIAAACeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T08:25:38.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fAccountProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAccountProfile.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanCafe\\fAccountProfile.cs",
-              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAccountProfile.cs",
-              "RelativeToolTip": "QuanLyQuanCafe\\fAccountProfile.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAkwD8AAAAxAAAAAAAAAA==",
+              "Title": "fAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAdmin.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\fAdmin.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAdmin.cs*",
+              "RelativeToolTip": "QuanLyQuanCafe\\fAdmin.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T08:00:55.631Z",
+              "WhenOpened": "2024-09-24T14:16:18.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "fTableManager.cs",
-              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fTableManager.cs",
-              "RelativeDocumentMoniker": "QuanLyQuanCafe\\fTableManager.cs",
-              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fTableManager.cs",
-              "RelativeToolTip": "QuanLyQuanCafe\\fTableManager.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAswDcAAAANAAAAAAAAAA==",
+              "Title": "FoodDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "RelativeToolTip": "QuanLyQuanCafe\\DAO\\FoodDAO.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwCYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T07:55:58.867Z",
+              "WhenOpened": "2024-09-24T14:14:45.857Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAdmin.cs",
+              "RelativeDocumentMoniker": "QuanLyQuanCafe\\fAdmin.cs",
+              "ToolTip": "C:\\Users\\Phong23\\Documents\\source\\QuanLyQuan\\QuanLyQuanCafe\\fAdmin.cs [Design]*",
+              "RelativeToolTip": "QuanLyQuanCafe\\fAdmin.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T14:14:25.625Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

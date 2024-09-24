@@ -56,6 +56,7 @@ namespace QuanLyQuanCafe
             {
                 adminToolStripMenuItem.Enabled = true;
             }
+          //  thôngTinTàiKhoảnToolStripMenuItem.Text= "Xin chào " + loginAccount.DisplayName + "!";
             
         }
         void LoadCategory()

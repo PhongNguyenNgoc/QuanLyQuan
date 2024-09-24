@@ -17,11 +17,16 @@ namespace QuanLyQuanCafe
         public fAdmin()
         {
             InitializeComponent();
-            LoadDateTimePickerBill();
-            LoadListViewByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            Load();
 
         }
         #region Method
+        void Load()
+        {
+            LoadDateTimePickerBill();
+            LoadListViewByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            LoadListFood();
+        }
         void LoadDateTimePickerBill()
         {
             DateTime today = DateTime.Now;
@@ -32,6 +37,11 @@ namespace QuanLyQuanCafe
         {
             dtgvBill.DataSource = BillDAO.Instance.GetBillListBydate(checkIn, checkOut);
         }
+
+        void LoadListFood()
+        {
+            dtgvFood.DataSource = FoodDAO.Instance.GetListFood();
+        }
         #endregion
 
 
@@ -40,6 +50,12 @@ namespace QuanLyQuanCafe
         {
             LoadListViewByDate(dtpkFromDate.Value, dtpkToDate.Value);
         }
+        private void btnShowFood_Click(object sender, EventArgs e)
+        {
+            LoadListFood();
+        }
         #endregion
+
+
     }
 }
