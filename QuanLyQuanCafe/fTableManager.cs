@@ -18,15 +18,45 @@ namespace QuanLyQuanCafe
 {
     public partial class fTableManager : Form
     {
-        public fTableManager()
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get
+            {
+                return loginAccount;
+            }
+
+            set
+            {
+                loginAccount = value;
+                ChangeAccount(loginAccount.Type);
+            }
+        }
+
+        public fTableManager(Account acc)
         {
             InitializeComponent();
+       
+            this.LoginAccount = acc;
+
             LoadTable();
             LoadCategory();
             LoadComboBoxTable(cbSwitchTable);
         }
         #region Method
 
+        void ChangeAccount (int type)
+        {
+            if (type == 0)
+            {
+                adminToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                adminToolStripMenuItem.Enabled = true;
+            }
+        }
         void LoadCategory()
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyQuanCafe.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -27,6 +28,15 @@ namespace QuanLyQuanCafe.DAO
             DataTable result = DataProvider.Instance.ExcuteQuery(query,new Object[] {username , password});
 
             return result.Rows.Count>0;
+        }
+        public Account GetAccountByUsername(string username) 
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM dbo.Account WHERE UserName='" + username+"'");
+            foreach (DataRow item in data.Rows) 
+            {
+                return new Account(item);
+            }
+            return null;
         }
     }
 }
