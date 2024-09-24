@@ -29,6 +29,12 @@ namespace QuanLyQuanCafe.DAO
 
             return result.Rows.Count>0;
         }
+
+        public bool UpdateAccount(string userName, string displayName, string pass, string newPass) 
+        {
+           int result = DataProvider.Instance.ExcuteNonQuery("EXEC dbo.USP_UpdateAccount @userName , @displayName , @password , @newPassword ",new object[] { userName, displayName, pass, newPass });
+           return result>0;
+        }
         public Account GetAccountByUsername(string username) 
         {
             DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM dbo.Account WHERE UserName='" + username+"'");
@@ -38,5 +44,6 @@ namespace QuanLyQuanCafe.DAO
             }
             return null;
         }
+
     }
 }

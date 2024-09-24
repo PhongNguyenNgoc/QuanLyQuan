@@ -345,6 +345,29 @@ BEGIN
 	WHERE DateCheckIn >= '20240923' AND DateCheckOut >='20240923'AND b.status = 1 AND t.id=b.idTable
 
 END
+GO
+--tao proc  cap nhat user=================
+CREATE PROC USP_UpdateAccount
+@userName NVARCHAR(100), @displayName NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
+AS
+BEGIN
+	DECLARE @isRightPass INT
+	SELECT @isRightPass = COUNT(*) FROM dbo.Account WHERE UserName=@userName AND PassWord=@password
+	IF (@isRightPass=1)
+		BEGIN
+			IF (@newPassword IS NULL OR @newPassword='')
+				BEGIN
+					UPDATE dbo.Account SET	DisplayName=@displayName WHERE UserName=@userName
+				END
+			ELSE
+				BEGIN
+				    UPDATE dbo.Account SET	DisplayName=@displayName , PassWord=@newPassword WHERE UserName=@userName
+				END	
+				
+		END
+	
+	
+END
 go
 --======================DEBUG ZONE========================
 UPDATE dbo.TableFood SET status = N'Có người' WHERE id=7
@@ -402,3 +425,7 @@ EXEC dbo.USP_GetListBillByDate @checkIn = '20240923', -- date
 
 
 SELECT * FROM dbo.BillInfo
+SELECT * FROM dbo.Account WHERE UserName='admin'
+
+
+ SELECT COUNT(*) FROM dbo.Account WHERE UserName='nv' AND PassWord='nv'

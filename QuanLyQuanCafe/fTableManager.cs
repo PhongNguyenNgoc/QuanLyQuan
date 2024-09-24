@@ -56,6 +56,7 @@ namespace QuanLyQuanCafe
             {
                 adminToolStripMenuItem.Enabled = true;
             }
+            
         }
         void LoadCategory()
         {
@@ -139,7 +140,7 @@ namespace QuanLyQuanCafe
 
         private void thôngKtinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile f = new fAccountProfile();
+            fAccountProfile f = new fAccountProfile(LoginAccount);
             f.ShowDialog();
         }
 
