@@ -38,7 +38,7 @@
             this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
             this.tpFood = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txbFoodName = new System.Windows.Forms.TextBox();
+            this.txbSearchFoodName = new System.Windows.Forms.TextBox();
             this.btnSearchFood = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnShowFood = new System.Windows.Forms.Button();
@@ -50,10 +50,10 @@
             this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txbSearchFoodName = new System.Windows.Forms.TextBox();
+            this.txbFoodName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txbFoodID = new System.Windows.Forms.TextBox();
@@ -257,7 +257,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txbFoodName);
+            this.panel6.Controls.Add(this.txbSearchFoodName);
             this.panel6.Controls.Add(this.btnSearchFood);
             this.panel6.Location = new System.Drawing.Point(767, 8);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -265,13 +265,13 @@
             this.panel6.Size = new System.Drawing.Size(486, 102);
             this.panel6.TabIndex = 1;
             // 
-            // txbFoodName
+            // txbSearchFoodName
             // 
-            this.txbFoodName.Location = new System.Drawing.Point(4, 35);
-            this.txbFoodName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbFoodName.Name = "txbFoodName";
-            this.txbFoodName.Size = new System.Drawing.Size(338, 31);
-            this.txbFoodName.TabIndex = 5;
+            this.txbSearchFoodName.Location = new System.Drawing.Point(4, 35);
+            this.txbSearchFoodName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbSearchFoodName.Name = "txbSearchFoodName";
+            this.txbSearchFoodName.Size = new System.Drawing.Size(338, 31);
+            this.txbSearchFoodName.TabIndex = 5;
             // 
             // btnSearchFood
             // 
@@ -363,6 +363,11 @@
             this.nmFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodPrice.Location = new System.Drawing.Point(166, 10);
             this.nmFoodPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nmFoodPrice.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.nmFoodPrice.Name = "nmFoodPrice";
             this.nmFoodPrice.Size = new System.Drawing.Size(300, 39);
             this.nmFoodPrice.TabIndex = 1;
@@ -379,7 +384,7 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.cbCategory);
+            this.panel9.Controls.Add(this.cbFoodCategory);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Location = new System.Drawing.Point(12, 186);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -387,15 +392,15 @@
             this.panel9.Size = new System.Drawing.Size(470, 75);
             this.panel9.TabIndex = 3;
             // 
-            // cbCategory
+            // cbFoodCategory
             // 
-            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(166, 12);
-            this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(300, 37);
-            this.cbCategory.TabIndex = 1;
+            this.cbFoodCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFoodCategory.FormattingEnabled = true;
+            this.cbFoodCategory.Location = new System.Drawing.Point(166, 12);
+            this.cbFoodCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbFoodCategory.Name = "cbFoodCategory";
+            this.cbFoodCategory.Size = new System.Drawing.Size(300, 37);
+            this.cbFoodCategory.TabIndex = 1;
             // 
             // label3
             // 
@@ -409,7 +414,7 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.txbSearchFoodName);
+            this.panel8.Controls.Add(this.txbFoodName);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Location = new System.Drawing.Point(12, 104);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -417,14 +422,14 @@
             this.panel8.Size = new System.Drawing.Size(470, 75);
             this.panel8.TabIndex = 2;
             // 
-            // txbSearchFoodName
+            // txbFoodName
             // 
-            this.txbSearchFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearchFoodName.Location = new System.Drawing.Point(166, 9);
-            this.txbSearchFoodName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbSearchFoodName.Name = "txbSearchFoodName";
-            this.txbSearchFoodName.Size = new System.Drawing.Size(300, 44);
-            this.txbSearchFoodName.TabIndex = 1;
+            this.txbFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFoodName.Location = new System.Drawing.Point(166, 9);
+            this.txbFoodName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbFoodName.Name = "txbFoodName";
+            this.txbFoodName.Size = new System.Drawing.Size(300, 44);
+            this.txbFoodName.TabIndex = 1;
             // 
             // label2
             // 
@@ -455,6 +460,7 @@
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(300, 44);
             this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
             // label1
             // 
@@ -1107,7 +1113,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dtgvFood;
-        private System.Windows.Forms.TextBox txbFoodName;
+        private System.Windows.Forms.TextBox txbSearchFoodName;
         private System.Windows.Forms.Button btnSearchFood;
         private System.Windows.Forms.Button btnShowFood;
         private System.Windows.Forms.Button btnEditFood;
@@ -1116,10 +1122,10 @@
         private System.Windows.Forms.TextBox txbFoodID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.ComboBox cbFoodCategory;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txbSearchFoodName;
+        private System.Windows.Forms.TextBox txbFoodName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.NumericUpDown nmFoodPrice;

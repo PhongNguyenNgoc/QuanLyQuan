@@ -37,11 +37,11 @@ namespace QuanLyQuanCafe.DAO
             List<Food> list = new List<Food>();
 
             string query = "SELECT * FROM dbo.Food";
-        DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
                 Food food = new Food(item);
-        list.Add(food);
+                list.Add(food);
             }
             return list;
         }
