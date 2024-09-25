@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace QuanLyQuanCafe
 {
@@ -51,9 +53,9 @@ namespace QuanLyQuanCafe
         
         void AddFoodBinding()
         {
-            txbFoodName.DataBindings.Add(new Binding("Text",dtgvFood.DataSource,"name"));
-            txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "id"));
-            nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "price"));
+            txbFoodName.DataBindings.Add(new Binding("Text",dtgvFood.DataSource,"name",true,DataSourceUpdateMode.Never));
+            txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "id", true, DataSourceUpdateMode.Never));
+            nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "price", true, DataSourceUpdateMode.Never));
 
         }
         void LoadCategoryIntoComboBox(ComboBox cb)
@@ -96,7 +98,48 @@ namespace QuanLyQuanCafe
                 cbFoodCategory.SelectedIndex = index;
             }
         }
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+            string name = txbFoodName.Text;
+            int categoryID = (cbFoodCategory.SelectedItem as Category).ID;
+            float price = (float)nmFoodPrice.Value;
 
+            if (FoodDAO.Instance.InsertFood(name, categoryID, price))
+            {
+                MessageBox.Show("Thêm món thành công", "Thông báo");
+                LoadListFood();
+            }
+            else
+                MessageBox.Show("Có lỗi khi thêm");
+        }
+
+        private void btnEditFood_Click(object sender, EventArgs e)
+        {
+            string name = txbFoodName.Text;
+            int categoryID = (cbFoodCategory.SelectedItem as Category).ID;
+            float price = (float)nmFoodPrice.Value;
+            int id = Convert.ToInt32(txbFoodID.Text);
+
+            if (FoodDAO.Instance.UpdateFood(id,name,categoryID,price))
+            {
+                MessageBox.Show("Sửa món thành công", "Thông báo");
+                LoadListFood();
+            }
+            else
+                MessageBox.Show("Có lỗi khi sửa");
+        }
+        private void btnDeleteFood_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txbFoodID.Text);
+
+            if (FoodDAO.Instance.DeleteFood(id))
+            {
+                MessageBox.Show("Xóa món thành công", "Thông báo");
+                LoadListFood();
+            }
+            else
+                MessageBox.Show("Có lỗi khi xóa");
+        }
         #endregion
 
 

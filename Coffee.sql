@@ -427,5 +427,13 @@ EXEC dbo.USP_GetListBillByDate @checkIn = '20240923', -- date
 SELECT * FROM dbo.BillInfo
 SELECT * FROM dbo.Account WHERE UserName='admin'
 
-
+SELECT * FROM dbo.Food
  SELECT COUNT(*) FROM dbo.Account WHERE UserName='nv' AND PassWord='nv'
+
+ INSERT INTO dbo.Food( name, idCategory, price ) VALUES  ( N'',0, 0.0 )
+ UPDATE dbo.Food SET name=N'', idCategory = 5, price = 0 WHERE id = 5
+
+ SELECT * FROM dbo.BillInfo
+ DELETE dbo.BillInfo WHERE idFood=2
+ 
+ SELECT * FROM dbo.Food 
